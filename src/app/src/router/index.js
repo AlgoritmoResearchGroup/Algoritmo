@@ -3,9 +3,10 @@ import VueRouter from 'vue-router';
 
 import routes from './routes';
 import LoginCard from '../components/LoginCard.vue';
-
+import ButtonCard from '../components/ButtonCard.vue';
 
 Vue.component('login-card', LoginCard);
+Vue.component('button-card', ButtonCard);
 
 Vue.use(VueRouter);
 
