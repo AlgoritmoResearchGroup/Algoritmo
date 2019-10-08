@@ -3,6 +3,7 @@
   <q-page>
     <h3 class="title">Cartografia da Cultura</h3>
     <div class="map" style="">
+      <l-map></l-map>
       <login-card class="my-card"></login-card>
       <button-card class="stcomp"></button-card>
     </div>
