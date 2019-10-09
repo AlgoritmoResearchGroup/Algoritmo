@@ -3,7 +3,7 @@
     <q-buttom rounded class="decision-buttom" @click="opemLogin = true" >
     </q-buttom>
     <div v-if="opemLogin">
-      <q-card class="my-card" style="background-color: white; position: relative;">
+      <q-card flat class="my-card" style="background-color: orange; position: relative; border-radius: 0px;">
         <q-item style="margin: 10px;">
         <q-item-section avatar>
           <q-avatar>
@@ -48,15 +48,9 @@ export default {
 </script>
 
 <style scoped>
-  .my-card {
-    width: 300px;
-    position: absolute;
-    top: 0px;
-    left: 10px;
-  }
   .decision-buttom {
     width: 100px; height: 100px;
-    background-color: blue;
+    background-color: black;
     position: absolute;
     top: 0px;
     left: 10px;
