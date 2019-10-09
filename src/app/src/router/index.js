@@ -7,11 +7,13 @@ import 'leaflet/dist/leaflet.css';
 import routes from './routes';
 import LoginCard from '../components/LoginCard.vue';
 import ButtonCard from '../components/ButtonCard.vue';
+import MapaImport from '../components/MapaImport.vue';
 
 
 Vue.component('l-map', LMap);
 Vue.component('l-tile-layer', LTileLayer);
 Vue.component('l-marker', LMarker);
+Vue.component('map-import', MapaImport);
 
 delete Icon.Default.prototype.getIconUrl;
 
@@ -23,7 +25,6 @@ delete Icon.Default.prototype.getIconUrl;
 
 Vue.component('login-card', LoginCard);
 Vue.component('button-card', ButtonCard);
-// Vue.component('leaf-map', Mapa);
 
 Vue.use(VueRouter);
 
