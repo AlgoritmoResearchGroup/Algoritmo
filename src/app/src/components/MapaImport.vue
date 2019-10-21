@@ -1,5 +1,5 @@
 <template>
-    <div style="display: flex; height: 500px; width: 1300px">
+    <div style="display: flex; height: 580px; width: 100%">
         <l-map style="" :zoom="13" :center="[-20.4435, -54.6478]" :options="{zoomControl: true}">
             <LTileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"></LTileLayer>
             <l-marker></l-marker>
