@@ -1,12 +1,15 @@
 
 <template>
   <q-page style="background-color: white">
-    <h3 class="title">Cartografia da Cultura</h3>
+    <div class="title-container">
+      <h4 class="pre-title">Fórum de Cultura de Campo Grande</h4>
+      <h3 class="title">CARTOGRAFIA DA CULTURA</h3>
+    </div>
     <div class="map-container" style="">
       <map-import></map-import>
     </div>
     <div class="nav-container">
-        <a href="#"> SOBRE <span>S</span></a>
+        <a href="/About"> SOBRE <span>S</span></a>
         <a href="#"> AGENDA <span>A</span></a>
         <a href="#"> LOGIN <span>L</span></a>
       </div>
@@ -56,11 +59,10 @@ export default {
     top: 0px;
     text-size: 20px;
   }
-  .title {
-    position: absolute;
-    top: 0px;
-    left: 200px;
-    margin: 0px;
+  .title-container {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
   }
   .my-card {
     width: 300px; height: 100px;
@@ -70,7 +72,7 @@ export default {
     z-index: 5;
   }
   .stcomp {
-    background-color: orange;
+    background-color: black;
     width: 100px; height: 100px;
     position: absolute;
     top: -20px;
