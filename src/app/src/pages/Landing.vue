@@ -2,16 +2,16 @@
 <template>
   <q-page style="background-color: white">
     <div class="title-container">
-      <h4 class="pre-title">Fórum de Cultura de Campo Grande</h4>
-      <h3 class="title">CARTOGRAFIA DA CULTURA</h3>
+      <a class="pre-title">Fórum de Cultura Campo Grande</a>
+      <a class="title">CARTOGRAFIA DA CULTURA</a>
     </div>
     <div class="map-container" style="">
       <map-import></map-import>
     </div>
     <div class="nav-container">
-        <a href="/About"> SOBRE <span>S</span></a>
-        <a href="#"> AGENDA <span>A</span></a>
-        <a href="#"> LOGIN <span>L</span></a>
+        <a > SOBRE <span>S</span></a>
+        <a > AGENDA <span>A</span></a>
+        <a > LOGIN <span>L</span></a>
       </div>
   </q-page>
 </template>
@@ -33,7 +33,7 @@ export default {
     display: block;
     text-decoration: none;
     background: #fff;
-    color: #e74c3c;
+    color: black;
     padding: 15px 0px 15px 10px;
     margin: 5px;
     width: 150px;
@@ -46,6 +46,9 @@ export default {
   .nav-container a:hover {
     margin-left: 0px;
   }
+  .nav-container a span:hover {
+    margin-left: -70px;
+  }
   .nav-container a span{
     float: right;
     width: 70px;
@@ -53,16 +56,32 @@ export default {
     height: 100%;
     text-align: center;
     color: #fff;
-    background: #cc4125ff;
+    background: black;
     position: absolute;
     right: 0px;
     top: 0px;
     text-size: 20px;
   }
   .title-container {
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
-    height: 20px;
+    align-items: center;
+    height: 50px;
+  }
+  .pre-title {
+    margin-top: 20px;
+    width: 180px;
+    margin-left: 20px;
+    font-family: roboto;
+    font-size: 18px;
+  }
+  .title {
+    margin-top: 20px;
+    width: 700px;
+    font-family: Level;
+    font-size: 40px;
+    text-decoration: none;
   }
   .my-card {
     width: 300px; height: 100px;
@@ -80,7 +99,7 @@ export default {
   }
   .map-container {
     position: relative;
-    top: 70px;
+    top: 40px;
     left: 0px;
     z-index: 0;
   }
