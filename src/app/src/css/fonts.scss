@@ -1,0 +1,42 @@
+$font_path: '~@/assets/fonts/';
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-Regular'),
+    url($font_path+'Roboto-regular.woff2') format('woff2'),
+    url($font_path+'Roboto-regular.woff') format('woff'),
+    url($font_path+'Roboto-regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black"), local("Roboto-Black"),
+    url($font_path+"Roboto-black.woff2") format("woff2"),
+    url($font_path+"Roboto-black.woff") format("woff"),
+    url($font_path+"Roboto-black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "CREAM";
+  src: local("CREAM"), local("CREAM"),
+    url($font_path+"creampeach/CreamPeach__.TTF") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "BITWONDER";
+  src: local("BITWONDER"), local("BITWONDER"),
+    url($font_path+"bitwonder/BITWONDER.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "LEVEL";
+  src: local("LEVEL"), local("LEVEL"),
+    url($font_path+"level/LEVEL__.TTF") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+

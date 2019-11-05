@@ -1,6 +1,6 @@
 <template>
   <q-layout>
-    <!-- map here -->
+    <!--  -->
     <q-page-container>
       <router-view />
     </q-page-container>

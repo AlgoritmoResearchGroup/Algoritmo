@@ -15,13 +15,8 @@ Vue.component('l-tile-layer', LTileLayer);
 Vue.component('l-marker', LMarker);
 Vue.component('map-import', MapaImport);
 
-delete Icon.Default.prototype.getIconUrl;
 
-/* Icon.Default.mergeOptions({
-  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-  iconUrl: require('leaflet/dist/images/marker-icon.png'),
-  shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
-}); */
+delete Icon.Default.prototype.getIconUrl;
 
 Vue.component('login-card', LoginCard);
 Vue.component('button-card', ButtonCard);

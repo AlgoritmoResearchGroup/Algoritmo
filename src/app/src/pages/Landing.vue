@@ -1,17 +1,23 @@
 
 <template>
   <q-page style="background-color: white">
-    <div class="title-container">
-      <h4 class="pre-title">Fórum de Cultura de Campo Grande</h4>
-      <h3 class="title">CARTOGRAFIA DA CULTURA</h3>
+    <div class="header-container">
+      <div class="column">
+        <span class="forum-info">Fórum Municipal</span>
+        <span class="forum-info">De Cultura</span>
+        <span class="forum-info">De Campo Grande</span>
+        <span class="text">cultura em movimento</span>
+      </div>
+      <span class="title">CARTOGRAFIA DA CULTURA</span>
     </div>
     <div class="map-container" style="">
-      <map-import></map-import>
+      <map-import class="map"></map-import>
     </div>
     <div class="nav-container">
-        <a href="/About"> SOBRE <span>S</span></a>
-        <a href="#"> AGENDA <span>A</span></a>
-        <a href="#"> LOGIN <span>L</span></a>
+        <div class="menu"> SOBRE> </div>
+        <div class="menu"> AGENDA> </div>
+        <div class="menu"> DEBATE> </div>
+        <div class="menu"> LOGIN> </div>
       </div>
   </q-page>
 </template>
@@ -22,66 +28,78 @@ export default {
 };
 </script>
 
+
 <style lang="stylus" scoped>
-  .nav-container {
-    position:absolute;
-    margin-top: 100px;
-    top: 50%;
-    transform: translateY(-50%);
+
+.map {
+  height: 550px;
+  width: 100%;
+}
+.nav-container {
+  position:absolute;
+  top: 70%;
+  transform: translateY(-50%);
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 0;
+  height: 6.25rem; // 100px
+  background-color: black;
+}
+.stcomp {
+  background-color: black;
+  width: 100px; height: 100px;
+  position: absolute;
+  top: -20px;
+  left: 820px;
+}
+.map-container {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+}
+.menu {
+  font-family: LEVEL;
+  font-size: 40px;
+  display: block;
+  text-decoration: none;
+  background: none;
+  color: black;
+  margin: 10px;
+  letter-spacing: 1.5px;
+  position: relative;
+  margin-left: 0px;
   }
-  .nav-container a{
-    display: block;
-    text-decoration: none;
-    background: #fff;
-    color: #e74c3c;
-    padding: 15px 0px 15px 10px;
-    margin: 5px;
-    width: 150px;
-    letter-spacing: 1.5px;
-    box-shadow: 2px 2px 16px 0px rgba(0,0,0,0.75);
-    position: relative;
-    margin-left: -90px;
-    transition: 0.5s  ease;
-  }
-  .nav-container a:hover {
-    margin-left: 0px;
-  }
-  .nav-container a span{
-    float: right;
-    width: 70px;
-    line-height: 50px;
-    height: 100%;
-    text-align: center;
-    color: #fff;
-    background: #cc4125ff;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    text-size: 20px;
-  }
-  .title-container {
-    display: flex;
-    flex-direction: row;
-    height: 20px;
-  }
-  .my-card {
-    width: 300px; height: 100px;
-    position: absolute;
-    top: -20px;
-    left: 10px;
-    z-index: 5;
-  }
-  .stcomp {
-    background-color: black;
-    width: 100px; height: 100px;
-    position: absolute;
-    top: -20px;
-    left: 820px;
-  }
-  .map-container {
-    position: relative;
-    top: 70px;
-    left: 0px;
-    z-index: 0;
-  }
+.forum-info {
+  font-family: CREAM;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  color: white;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  flex-wrap: nowrap;
+  margin-left: 20px;
+}
+.text {
+  font-family: CREAM;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9375rem;
+  color: white;
+}
+.title {
+  margin-left: 100px;
+  font-family: LEVEL;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  color: white;
+}
 </style>
