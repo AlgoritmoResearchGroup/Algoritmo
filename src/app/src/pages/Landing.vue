@@ -30,11 +30,15 @@ export default {
 
 
 <style lang="stylus" scoped>
-<<<<<<< HEAD
-
 .map {
   height: 550px;
   width: 100%;
+}
+.map-container {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
 }
 .nav-container {
   position:absolute;
@@ -55,12 +59,6 @@ export default {
   position: absolute;
   top: -20px;
   left: 820px;
-}
-.map-container {
-  position: relative;
-  top: 0px;
-  left: 0px;
-  z-index: 0;
 }
 .menu {
   font-family: LEVEL;
