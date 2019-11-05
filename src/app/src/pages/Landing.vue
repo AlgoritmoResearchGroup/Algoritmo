@@ -30,6 +30,7 @@ export default {
 
 
 <style lang="stylus" scoped>
+<<<<<<< HEAD
 
 .map {
   height: 550px;
@@ -72,7 +73,7 @@ export default {
   letter-spacing: 1.5px;
   position: relative;
   margin-left: 0px;
-  }
+}
 .forum-info {
   font-family: CREAM;
   font-style: normal;
