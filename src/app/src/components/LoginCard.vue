@@ -1,14 +1,14 @@
 <template>
   <div>
-    <q-buttom rounded class="decision-buttom" v-if="opemPerfil===false" @click="opemLogin = true, addUnderscore()" style="font-family: LEVEL">
+    <q-buttom rounded class="decision-buttom" v-if="opemPerfil===false" @click="opemLogin = true, addUnderscoreL()" style="font-family: LEVEL">
       {{ addUnderscoreLogin + modalLogin }}
     </q-buttom>
     <div class="hidden-box" v-if="opemLogin">
-      <q-card flat class="my-card" style="background-color: white; position: relative; margin-top: -10px; border-radius: 0px;">
-        <q-item style="margin: 0px;">
+      <q-card flat class="my-card" style="background-color: white; position: relative; margin-top: -10px; border-radius: 0px; max-width: 240px;">
+        <q-item style="margin-left: 70%;">
           <q-item-section avatar>
             <q-avatar>
-              <q-icon name="clear" @click="opemLogin = false, refactUnderscore()"></q-icon>
+              <q-icon name="clear" @click="opemLogin = false, refactUnderscoreL()"></q-icon>
             </q-avatar>
           </q-item-section>
         </q-item>
@@ -18,6 +18,7 @@
           <template v-slot:append>
             <q-icon
               :name="isPwd ? 'visibility_off' : 'visibility'"
+              size="20px"
               class="cursor-pointer"
               @click="isPwd = !isPwd"
             />
@@ -28,21 +29,21 @@
       </q-card>
     </div>
     <!-- perfil-->
-    <q-buttom rounded class="decision-buttom" v-if="opemLogin===false && opemPerfil===true" @click="opemPerfil = true, closeBoxPerfil=true" style="font-family: LEVEL">
-      {{ modalPerfil }}
+    <q-buttom rounded class="decision-buttom" v-if="opemLogin===false && opemPerfil===true" @click="opemBoxPerfil = true, addUnderscoreP()" style="font-family: LEVEL">
+      {{ addUnderscorePerfil + modalPerfil }}
     </q-buttom>
-    <div class="hidden-box-perfil" v-if="opemPerfil && closeBoxPerfil">
+    <div class="hidden-box-perfil" v-if="opemBoxPerfil">
       <q-card flat class="my-card" style="background-color: white; position: relative; margin-top: -10px; border-radius: 0px;">
         <q-item style="margin-left: 10px;">
           <q-item-section avatar>
             <q-avatar>
-              <q-icon name="clear" @click="closeBoxPerfil = false"></q-icon>
+              <q-icon name="clear" @click="opemBoxPerfil = false, refactUnderscoreP()"></q-icon>
             </q-avatar>
           </q-item-section>
         </q-item>
 
         <q-btn color="white" text-color="black" label="Ver Perfil" style="margin: 0px;"/>
-        <q-btn @click="opemPerfil=false" color="white" text-color="black" label="Logout" style="margin: 0px;"/>
+        <q-btn @click="opemPerfil=false, opemBoxPerfil=false, refactUnderscoreL(), refactUnderscoreP()" color="white" text-color="black" label="Logout" style="margin: 0px;"/>
       </q-card>
     </div>
   </div>
@@ -58,18 +59,26 @@ export default {
       password: '',
       opemLogin: false,
       opemPerfil: false,
+      opemBoxPerfil: false,
       closeBoxPerfil: true,
       modalLogin: '___Login>',
       addUnderscoreLogin: '',
-      modalPerfil: '_________PERFIL_>',
+      modalPerfil: '___PERFIL_>',
+      addUnderscorePerfil: '',
     };
   },
   methods: {
-    addUnderscore() {
+    addUnderscoreL() {
       this.addUnderscoreLogin = '________';
     },
-    refactUnderscore() {
+    addUnderscoreP() {
+      this.addUnderscorePerfil = '_____';
+    },
+    refactUnderscoreL() {
       this.addUnderscoreLogin = '';
+    },
+    refactUnderscoreP() {
+      this.addUnderscorePerfil = '';
     },
   },
 };

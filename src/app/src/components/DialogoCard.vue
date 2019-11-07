@@ -4,8 +4,8 @@
       {{ modal }}
     </q-buttom>
     <div v-if="opem">
-        <q-card flat class="my-card" style="background-color: white; height: 100px; width: 92%; margin-top: -10px; position: relative; border-radius: 0px;">
-          <q-item style="margin-left: 10px;">
+        <q-card flat class="my-card" style="background-color: white; height: 100px; width: 92%; max-width: 168px; margin-top: -10px; position: relative; border-radius: 0px;">
+          <q-item style="margin-left: 70%;">
             <q-item-section avatar>
               <q-avatar>
                 <q-icon name="clear" @click="opem=false"></q-icon>
