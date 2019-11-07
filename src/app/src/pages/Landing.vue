@@ -14,10 +14,10 @@
       <map-import class="map"></map-import>
     </div>
     <div class="nav-container">
-        <div class="menu">___SOBRE> </div>
-        <div class="menu">___AGENDA> </div>
-        <div class="menu">___DIÁLOGO> </div>
-        <div class="menu">___LOGIN> </div>
+        <!--<div class="menu">___SOBRE> </div>
+        <div class="menu">___AGENDA> </div>-->
+        <b-card class="menu"></b-card>
+        <login class="menu"></login>
       </div>
   </q-page>
 </template>
@@ -61,7 +61,7 @@ export default {
   left: 820px;
 }
 .menu {
-  font-family: LEVEL;
+  font-family: Roboto;
   font-size: 40px;
   display: block;
   text-decoration: none;

@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-      zoom: 15,
+      zoom: 14,
       center: [-20.460277, -54.612277],
       markerLatLng: [-20.460277, -54.612277],
       bounds: null,
