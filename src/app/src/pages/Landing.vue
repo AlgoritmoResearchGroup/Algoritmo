@@ -16,7 +16,7 @@
     <div class="nav-container">
         <!--<div class="menu">___SOBRE> </div>
         <div class="menu">___AGENDA> </div>-->
-        <b-card class="menu"></b-card>
+        <d-card class="menu"></d-card>
         <login class="menu"></login>
       </div>
   </q-page>

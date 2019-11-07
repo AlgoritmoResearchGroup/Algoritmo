@@ -1,20 +1,20 @@
 <template>
   <div>
-    <q-buttom rounded class="decision-buttom" v-if="opemPerfil===false" @click="opemLogin = true" style="font-family: LEVEL">
-      {{ modal }}
+    <q-buttom rounded class="decision-buttom" v-if="opemPerfil===false" @click="opemLogin = true, addUnderscore()" style="font-family: LEVEL">
+      {{ addUnderscoreLogin + modalLogin }}
     </q-buttom>
     <div class="hidden-box" v-if="opemLogin">
-      <q-card flat class="my-card" style="background-color: white; position: relative; border-radius: 0px;">
+      <q-card flat class="my-card" style="background-color: white; position: relative; margin-top: -10px; border-radius: 0px;">
         <q-item style="margin: 0px;">
           <q-item-section avatar>
             <q-avatar>
-              <q-icon name="clear" @click="opemLogin = false"></q-icon>
+              <q-icon name="clear" @click="opemLogin = false, refactUnderscore()"></q-icon>
             </q-avatar>
           </q-item-section>
         </q-item>
 
-        <q-input v-model="userLogin" label="login" color="white" style="margin-left: 5px; width: 250px;"/>
-        <q-input v-model="password" label="senha" :type="isPwd ? 'password' : 'text'" hint="" style="margin: 5px; width: 250px;">
+        <q-input v-model="userLogin" label="login" color="white" style="margin-left: 5px; width: 90%;"/>
+        <q-input v-model="password" label="senha" :type="isPwd ? 'password' : 'text'" hint="" style="margin: 5px; width: 90%;">
           <template v-slot:append>
             <q-icon
               :name="isPwd ? 'visibility_off' : 'visibility'"
@@ -29,11 +29,11 @@
     </div>
     <!-- perfil-->
     <q-buttom rounded class="decision-buttom" v-if="opemLogin===false && opemPerfil===true" @click="opemPerfil = true, closeBoxPerfil=true" style="font-family: LEVEL">
-      ____Perfil>
+      {{ modalPerfil }}
     </q-buttom>
     <div class="hidden-box-perfil" v-if="opemPerfil && closeBoxPerfil">
-      <q-card flat class="my-card" style="background-color: white; position: relative; border-radius: 0px;">
-        <q-item style="margin: 0px;">
+      <q-card flat class="my-card" style="background-color: white; position: relative; margin-top: -10px; border-radius: 0px;">
+        <q-item style="margin-left: 10px;">
           <q-item-section avatar>
             <q-avatar>
               <q-icon name="clear" @click="closeBoxPerfil = false"></q-icon>
@@ -59,8 +59,18 @@ export default {
       opemLogin: false,
       opemPerfil: false,
       closeBoxPerfil: true,
-      modal: '___Login>',
+      modalLogin: '___Login>',
+      addUnderscoreLogin: '',
+      modalPerfil: '_________PERFIL_>',
     };
+  },
+  methods: {
+    addUnderscore() {
+      this.addUnderscoreLogin = '________';
+    },
+    refactUnderscore() {
+      this.addUnderscoreLogin = '';
+    },
   },
 };
 </script>
@@ -79,5 +89,6 @@ export default {
   }
   .my-card {
     border-radius: 5px;
+    width: 93%;
   }
 </style>

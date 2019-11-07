@@ -4,13 +4,13 @@ import VueRouter from 'vue-router';
 import { Icon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import Login from '../components/LoginCard.vue';
-import BCard from '../components/ButtonCard.vue';
+import DCard from '../components/DialogoCard.vue';
 import routes from './routes';
 import MapaImport from '../components/MapaImport.vue';
 
 Vue.component('map-import', MapaImport);
 Vue.component('login', Login);
-Vue.component('b-card', BCard);
+Vue.component('d-card', DCard);
 
 delete Icon.Default.prototype.getIconUrl;
 
