@@ -19,12 +19,12 @@
 
 <script>
 export default {
-  name: 'DialogoCard',
+  name: 'SobreCard',
   data() {
     return {
       opem: false,
       closeBoxDialogo: false,
-      modal: '__DIÁLOGO>',
+      modal: '___SOBRE>',
     };
   },
 };

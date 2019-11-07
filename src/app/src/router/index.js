@@ -5,12 +5,18 @@ import { Icon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import Login from '../components/LoginCard.vue';
 import DCard from '../components/DialogoCard.vue';
+import ACard from '../components/AgendaCard.vue';
+import SCard from '../components/SobreCard.vue';
+import FCard from '../components/FilterCard.vue';
 import routes from './routes';
 import MapaImport from '../components/MapaImport.vue';
 
 Vue.component('map-import', MapaImport);
 Vue.component('login', Login);
 Vue.component('d-card', DCard);
+Vue.component('a-card', ACard);
+Vue.component('s-card', SCard);
+Vue.component('f-card', FCard);
 
 delete Icon.Default.prototype.getIconUrl;
 

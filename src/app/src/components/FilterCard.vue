@@ -4,8 +4,8 @@
       {{ modal }}
     </q-buttom>
     <div v-if="opem">
-        <q-card flat class="my-card" style="background-color: white; height: 100px; width: 92%; max-width: 168px; margin-top: -10px; position: relative; border-radius: 0px;">
-          <q-item style="margin-left: 70%;">
+        <q-card flat class="my-card" style="background-color: white; height: 100px; width: 100px; margin-top: -10px; position: relative; border-radius: 0px;">
+          <q-item style="margin-left: 10px;">
             <q-item-section avatar>
               <q-avatar>
                 <q-icon name="clear" @click="opem=false"></q-icon>
@@ -19,12 +19,12 @@
 
 <script>
 export default {
-  name: 'DialogoCard',
+  name: 'ButtonCard',
   data() {
     return {
       opem: false,
       closeBoxDialogo: false,
-      modal: '__DIÁLOGO>',
+      modal: '<Filtro___',
     };
   },
 };

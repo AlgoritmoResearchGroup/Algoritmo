@@ -1,6 +1,6 @@
 
 <template>
-  <q-page style="background-color: white">
+  <q-page style="background-color: white; width: 100%;">
     <div class="header-container">
       <div class="column">
         <span class="forum-info">Fórum Municipal</span>
@@ -11,14 +11,20 @@
       <span class="title">CARTOGRAFIA DA CULTURA</span>
     </div>
     <div class="map-container" style="">
-      <map-import class="map"></map-import>
+      <map-import class="map">
+      </map-import>
     </div>
-    <div class="nav-container">
-        <!--<div class="menu">___SOBRE> </div>
-        <div class="menu">___AGENDA> </div>-->
-        <d-card class="menu"></d-card>
-        <login class="menu"></login>
+    <div class="body">
+      <div class="nav-container">
+      <s-card class="l-menu"></s-card>
+      <a-card class="l-menu"></a-card>
+      <d-card class="l-menu"></d-card>
+      <login class="l-menu"></login>
       </div>
+      <div class="filter-container">
+        <f-card class="r-menu"></f-card>
+      </div>
+    </div>
   </q-page>
 </template>
 
@@ -31,19 +37,30 @@ export default {
 
 <style lang="stylus" scoped>
 .map {
+  z-index: 0;
   height: 550px;
   width: 100%;
 }
 .map-container {
+  background-color: none;
   position: relative;
   top: 0px;
   left: 0px;
   z-index: 0;
 }
+.body {
+  top: 0px;
+}
 .nav-container {
+  background-color: none;
   position:absolute;
-  top: 70%;
   transform: translateY(-50%);
+  float: left;
+}
+.filter-container {
+  position: relative;
+  background-color: none;
+  float: right;
 }
 .header-container {
   display: flex;
@@ -53,24 +70,22 @@ export default {
   height: 6.25rem; // 100px
   background-color: black;
 }
-.stcomp {
-  background-color: black;
-  width: 100px; height: 100px;
-  position: absolute;
-  top: -20px;
-  left: 820px;
+.l-menu {
+  font-size: 40px;
+  text-decoration: none;
+  background: none;
+  color: black;
+  letter-spacing: 0px;
 }
-.menu {
-  font-family: Roboto;
+.r-menu {
   font-size: 40px;
   display: block;
   text-decoration: none;
   background: none;
   color: black;
-  margin: 0px;
   letter-spacing: 0px;
-  position: relative;
-  margin-left: 0px;
+  float: right;
+  top: 50%;
 }
 .forum-info {
   font-family: BITWONDER;

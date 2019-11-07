@@ -19,12 +19,12 @@
 
 <script>
 export default {
-  name: 'DialogoCard',
+  name: 'AgendaCard',
   data() {
     return {
       opem: false,
       closeBoxDialogo: false,
-      modal: '__DIÁLOGO>',
+      modal: '__AGENDA>',
     };
   },
 };
