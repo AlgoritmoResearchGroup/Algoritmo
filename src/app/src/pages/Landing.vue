@@ -14,10 +14,10 @@
       <map-import class="map"></map-import>
     </div>
     <div class="nav-container">
-        <div class="menu"> SOBRE> </div>
-        <div class="menu"> AGENDA> </div>
-        <div class="menu"> DEBATE> </div>
-        <div class="menu"> LOGIN> </div>
+        <div class="menu">___SOBRE> </div>
+        <div class="menu">___AGENDA> </div>
+        <div class="menu">___DIÁLOGO> </div>
+        <div class="menu">___LOGIN> </div>
       </div>
   </q-page>
 </template>
@@ -67,13 +67,13 @@ export default {
   text-decoration: none;
   background: none;
   color: black;
-  margin: 10px;
-  letter-spacing: 1.5px;
+  margin: 0px;
+  letter-spacing: 0px;
   position: relative;
   margin-left: 0px;
 }
 .forum-info {
-  font-family: CREAM;
+  font-family: BITWONDER;
   font-style: normal;
   font-weight: normal;
   font-size: 1.125rem;

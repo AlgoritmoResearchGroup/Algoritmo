@@ -9,18 +9,22 @@
       style="height: 100%; width: 100%"
       :zoom="zoom"
       :center="center"
+      :options="{zoomControl: false}"
       @update:zoom="zoomUpdated"
       @update:center="centerUpdated"
       @update:bounds="boundsUpdated"
     >
+      <l-control-zoom position="topright"  ></l-control-zoom>
       <l-tile-layer :url="url"></l-tile-layer>
-      <l-marker></l-marker>
+      <l-marker :lat-lng="markerLatLng" ></l-marker>
     </l-map>
   </div>
 </template>
 
 <script>
-import { LMap, LTileLayer, LMarker } from 'vue2-leaflet';
+import {
+  LMap, LTileLayer, LMarker, LControlZoom,
+} from 'vue2-leaflet';
 
 export default {
   name: 'MyAwesomeMap',
@@ -28,12 +32,14 @@ export default {
     LMap,
     LTileLayer,
     LMarker,
+    LControlZoom,
   },
   data() {
     return {
       url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
       zoom: 15,
       center: [-20.460277, -54.612277],
+      markerLatLng: [-20.460277, -54.612277],
       bounds: null,
     };
   },
