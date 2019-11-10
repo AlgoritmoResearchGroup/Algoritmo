@@ -10,11 +10,11 @@
       </div>
       <span class="title">CARTOGRAFIA DA CULTURA</span>
     </div>
-    <div class="map-container" style="">
-      <map-import class="map">
-      </map-import>
-    </div>
     <div class="body">
+      <div class="map-container" style="">
+        <map-import class="map">
+        </map-import>
+      </div>
       <div class="nav-container">
       <s-card class="l-menu"></s-card>
       <a-card class="l-menu"></a-card>
@@ -41,26 +41,32 @@ export default {
   height: 550px;
   width: 100%;
 }
-.map-container {
-  background-color: none;
+.body {
   position: relative;
   top: 0px;
-  left: 0px;
-  z-index: 0;
 }
-.body {
-  top: 0px;
+.map-container {
+  background-color: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 .nav-container {
   background-color: none;
-  position:absolute;
-  transform: translateY(-50%);
-  float: left;
+  height: 100%;
+  position: absolute;
+  top: 300px;
+  left: 0;
+  z-index: 1;
 }
 .filter-container {
-  position: relative;
+  position: absolute;
+  top: 400px;
+  right: 0;
   background-color: none;
-  float: right;
 }
 .header-container {
   display: flex;
