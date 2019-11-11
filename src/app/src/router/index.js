@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 
 import { Icon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import Login from '../components/LoginCard.vue';
+import LCard from '../components/LoginCard.vue';
 import DCard from '../components/DialogoCard.vue';
 import ACard from '../components/AgendaCard.vue';
 import SCard from '../components/SobreCard.vue';
@@ -12,7 +12,7 @@ import routes from './routes';
 import MapaImport from '../components/MapaImport.vue';
 
 Vue.component('map-import', MapaImport);
-Vue.component('login', Login);
+Vue.component('l-card', LCard);
 Vue.component('d-card', DCard);
 Vue.component('a-card', ACard);
 Vue.component('s-card', SCard);

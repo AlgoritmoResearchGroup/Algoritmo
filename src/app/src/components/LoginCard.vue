@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="login-field">
     <q-buttom rounded class="decision-buttom" v-if="opemPerfil===false" @click="opemLogin = true, addUnderscoreL()" style="font-family: LEVEL">
       {{ addUnderscoreLogin + modalLogin }}
     </q-buttom>
-    <div class="hidden-box" v-if="opemLogin">
+    <div class="card-decision-button" v-if="opemLogin">
       <q-card flat class="my-card" style="background-color: white; position: relative; margin-top: -10px; border-radius: 0px; max-width: 240px;">
         <q-item style="margin-left: 70%;">
           <q-item-section avatar>
@@ -89,12 +89,9 @@ export default {
     font-size: 40px;
     background-color: none;
     position: relative;
-    top: 0px;
     left: 0px;
+    bottom: 0px;
     z-index: 1;
-  }
-  .hidden-box-enter {
-    transform: translateX(100%);
   }
   .my-card {
     border-radius: 5px;

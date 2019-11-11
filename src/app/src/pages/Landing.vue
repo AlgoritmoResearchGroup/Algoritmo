@@ -19,7 +19,7 @@
       <s-card class="l-menu"></s-card>
       <a-card class="l-menu"></a-card>
       <d-card class="l-menu"></d-card>
-      <login class="l-menu"></login>
+      <l-card class="l-menu"></l-card>
       </div>
       <div class="filter-container">
         <f-card class="r-menu"></f-card>
@@ -58,13 +58,13 @@ export default {
   background-color: none;
   height: 100%;
   position: absolute;
-  top: 300px;
+  top: 30vh;
   left: 0;
   z-index: 1;
 }
 .filter-container {
   position: absolute;
-  top: 400px;
+  top: 70vh;
   right: 0;
   background-color: none;
 }

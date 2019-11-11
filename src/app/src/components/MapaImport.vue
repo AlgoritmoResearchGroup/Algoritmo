@@ -16,7 +16,7 @@
     >
       <l-control-zoom position="topright"  ></l-control-zoom>
       <l-tile-layer :url="url"></l-tile-layer>
-      <l-marker :lat-lng="markerLatLng" ></l-marker>
+      <l-marker :lat-lng="markerLatLng"></l-marker>
     </l-map>
   </div>
 </template>
@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-      zoom: 14,
+      zoom: 15,
       center: [-20.460277, -54.612277],
       markerLatLng: [-20.460277, -54.612277],
       bounds: null,
