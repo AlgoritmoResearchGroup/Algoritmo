@@ -58,7 +58,7 @@ export default {
   background-color: none;
   height: 100%;
   position: absolute;
-  top: 30vh;
+  top: 20vh;
   left: 0;
   z-index: 1;
 }

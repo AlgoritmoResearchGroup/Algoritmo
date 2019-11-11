@@ -1,6 +1,6 @@
 <template>
   <div>
-    <q-buttom rounded class="decision-buttom" @click="opem = true" >
+    <q-buttom rounded class="decision-buttom" v-if=" loginTrue" @click="opem = true" >
       {{ modal }}
     </q-buttom>
     <div v-if="opem">
@@ -22,6 +22,7 @@ export default {
   name: 'DialogoCard',
   data() {
     return {
+      loginTrue: false,
       opem: false,
       closeBoxDialogo: false,
       modal: '__DIÁLOGO>',
