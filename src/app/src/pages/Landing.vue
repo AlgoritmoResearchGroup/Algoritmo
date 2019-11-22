@@ -16,13 +16,56 @@
         </map-import>
       </div>
       <div class="nav-container">
-      <s-card class="l-menu"></s-card>
-      <a-card class="l-menu"></a-card>
-      <d-card class="l-menu"></d-card>
-      <l-card class="l-menu"></l-card>
+        <q-list>
+          <q-expansion-item popup default-opened :header-style="{ backgroundColor: '#7FFFD4' }" icon="notes" label="SOBRE" caption="">
+            <q-separator />
+            <q-card>
+              <q-card-section>
+                Lorem ipsum dolor sit amet,
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+          <q-expansion-item popup :header-style="{ backgroundColor: '#F0E68C'}" icon="font_download"  label="AGENDA" caption="">
+            <q-separator />
+            <q-card>
+              <q-card-section>
+                Lorem ipsum dolor sit amet,
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+          <q-expansion-item popup :header-style="{ backgroundColor: '#FFA07A'}" :duration="400" icon="account_circle" label="LOGIN" caption="">
+            <q-separator />
+            <q-card>
+              <q-card-section>
+                <q-input outlined v-model="userLogin" label="login" style="margin: 10px; width: 90%;"/>
+                <q-input outlined v-model="password" label="senha" :type="isPwd ? 'password' : 'text'" hint="" style="margin: 10px; width: 90%; padding-bottom: 0px;">
+                  <template v-slot:append>
+                    <q-icon
+                      :name="isPwd ? 'visibility_off' : 'visibility'"
+                      size="20px"
+                      class="cursor-pointer"
+                      @click="isPwd = !isPwd"
+                    />
+                  </template>
+                </q-input>
+                <div class="btn-field" style="padding-bottom: 5px;">
+                  <q-btn outlined class="btn-logar" @click="opemPerfil=true, opemLogin=false" color="white" text-color="black" label="Logar" style="margin-left: 10px; margin-top: -25px;"/>
+                  <!--<q-btn outlined class="btn-cadastro" color="white" text-color="black" label="Cadastre-se" style="margin-left: 10px;"/>-->
+                </div>
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+    </q-list>
       </div>
       <div class="filter-container">
-        <f-card class="r-menu"></f-card>
+        <q-expansion-item popup :header-style="{ backgroundColor: '#98FB98'}" icon="bubble_chart" label="FILTRO" caption="">
+            <q-separator />
+            <q-card>
+              <q-card-section>
+                Lorem ipsum dolor sit amet,
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
       </div>
     </div>
   </q-page>
@@ -64,7 +107,7 @@ export default {
 }
 .filter-container {
   position: absolute;
-  top: 70vh;
+  top: 60vh;
   right: 0;
   background-color: none;
 }
