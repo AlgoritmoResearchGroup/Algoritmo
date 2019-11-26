@@ -4,7 +4,7 @@
         <q-icon name="keyboard_arrow_left" style=""></q-icon>
         <span>Voltar ao Mapa</span>
     </q-btn>
-    <div class="column" style="align-content: center;">
+    <div class="column" style="align-content: flex-start;">
       <div class="row">
         <div class="q-pa-md row items-start q-gutter-md wrap" style="width: 100%;">
           <q-card class="perfil-card" style="min-widht: 350px;">
@@ -28,6 +28,64 @@
                   <q-icon name="edit" size="20px"></q-icon>
                 </q-btn>
               </div>
+            </q-card-actions>
+          </q-card>
+          <q-card class="schedule-card" style="min-width: 30%">
+            <q-card-section class="bg-green text-black">
+              <div class="text-h6">Eventos</div>
+              <div class="text-subtitle2">Crie eventos</div>
+            </q-card-section>
+
+            <q-card-section class="" v-if="opemEventBox" style="width: 100%; height: 100%">
+              <span class="subtitle" style="font-size: 12px; position: relative; top: 10px;">
+                Este pin te localiza no mapa com os dados inseridos abaixo
+              </span>
+              <div class="collumn" style="width: 300px;">
+                <span class="text-info text-black" style="font-size: 12px; position: relative; top: 10px;">Nome do Evento</span>
+                <q-input class="input" v-model="nomeEvento" label="" color="white"/>
+              </div>
+              <div class="collumn" style="width: 300px;">
+                <span class="text-info text-black" style="font-size: 12px; position: relative; top: 10px;">Local do Evento</span>
+                <q-input class="input" v-model="localEvento" label="" color="white"/>
+              </div>
+              <div class="row">
+                <div class="collumn" style="width: 150px;">
+                  <span class="text-info text-black" style="font-size: 12px; position: relative; top: 10px;">Data</span>
+                  <q-input class="input" v-model="dataEvento" label="" color="white"/>
+                </div>
+                <div class="collumn" style="width: 150px;">
+                  <span class="text-info text-black" style="font-size: 12px; position: relative; top: 10px;">Horário</span>
+                  <q-input class="input" v-model="localEvento" label="" color="white"/>
+                </div>
+                <div class="collumn" style="width: 150px;">
+                  <span class="text-info text-black" style="font-size: 12px; position: relative; top: 10px;">Valor Entrada</span>
+                  <q-input class="input" v-model="dataEvento" label="" color="white"/>
+                </div>
+              </div>
+              <div class="collumn" style="width: 250px;">
+                <span class="text-info text-black" style="font-size: 12px; position: relative; top: 10px;">Link do Evento</span>
+                <q-input class="input" v-model="localEvento" label="" color="white"/>
+              </div>
+              <div class="" style="margin-top: 20px; margin-left: 20px">
+                <q-uploader
+                  url=""
+                  label="Imagem do Evento"
+                  accept=".jpg, image/*"
+                  :max-file-size="2048"
+                  style="max-width: 200px"
+                  color="teal"
+                  flat
+                  square
+                  bordered
+                />
+              </div>
+            </q-card-section>
+
+            <q-separator />
+            <q-card-actions align="right" style="background: white">
+              <q-btn flat @click="opemEventBox=true" v-if="opemEventBox===false">Criar Evento</q-btn>
+              <q-btn flat v-if="opemEventBox">Adicionar Evento</q-btn>
+              <q-btn flat v-if="opemEventBox" @click="opemEventBox=false">Cancelar</q-btn>
             </q-card-actions>
           </q-card>
           <q-card class="pin-card" style="min-width: 28%;">
@@ -112,23 +170,6 @@
               <q-btn flat v-if="opemBoxPin" @click="opemBoxPin=false">Cancelar</q-btn>
             </q-card-actions>
           </q-card>
-          <q-card class="schedule-card" style="min-width: 30%">
-            <q-card-section class="bg-green text-black">
-              <div class="text-h6">Agenda</div>
-              <div class="text-subtitle2">Crie eventos</div>
-            </q-card-section>
-
-            <q-card-section class="" v-if="openEventBox" style="width: 80%;">
-
-            </q-card-section>
-
-            <q-separator />
-            <q-card-actions align="right" style="background: white">
-              <q-btn flat @click="opemEventBox=true" v-if="opemEventBox===false">Criar Evento</q-btn>
-              <q-btn flat v-if="opemEventBox">Adicionar Evento</q-btn>
-              <q-btn flat v-if="opemEventBox" @click="opemEventBox=false">Cancelar</q-btn>
-            </q-card-actions>
-          </q-card>
         </div>
       </div>
     </div>
@@ -146,7 +187,7 @@ export default {
       userPassword: '**********',
       opemBoxPin: false,
       addPin: false,
-      opemEventBox: false,
+      opemEventBox: true,
       addEvent: false,
     };
   },
