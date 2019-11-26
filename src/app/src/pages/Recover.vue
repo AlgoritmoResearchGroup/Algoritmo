@@ -76,7 +76,7 @@
           <div class="column">
             <span class="question" style="font-size: 15px;">Verifique se você recebeu o código de 6 números.</span>
             <div class="row" style="align-items: center">
-              <q-input outlined v-model="userRecoverEmail" label="insira o código"  color="black" style="margin-top: 10px; width: 280px;"/>
+              <q-input outlined v-model="userRecoverCode" label="insira o código"  color="black" style="margin-top: 10px; width: 280px;"/>
               <q-btn flat @click="step = 2" style="width: 35%; height: 30px; margin-left: 20px"><span style="font-size: 13px">Não recebeu um código?</span></q-btn>
             </div>
           </div>

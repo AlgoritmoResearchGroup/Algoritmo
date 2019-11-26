@@ -8,19 +8,29 @@
       </div>
       <div class="nav-container">
         <q-list>
-          <q-expansion-item popup default-opened :header-style="{ backgroundColor: '#7FFFD4' }" icon="notes" label="SOBRE" caption="">
+          <q-expansion-item class="sobre" popup default-opened :header-style="{ backgroundColor: '#7FFFD4' }" icon="notes" label="SOBRE" caption="">
             <q-separator />
             <q-card>
               <q-card-section>
-                Lorem ipsum dolor sit amet,
+                <div class="column">
+                  <router-link to="/About">Plataforma De Cultura</router-link>
+                  <a href="">Fórum </a>
+                  <router-link to="/Terms" style="">Termos</router-link>
+                  <router-link to="/Faq">FAQ</router-link>
+                  <div class="row" >
+                    <q-icon  color="white" name="img:assets/acebook_rounded.png" style="font-size: 4em"/>
+                    <q-icon color="white" name="img:~/assets/images/instagram_rounded.png" style="font-size: 4em"/>
+                  </div>
+                </div>
               </q-card-section>
             </q-card>
           </q-expansion-item>
-          <q-expansion-item popup :header-style="{ backgroundColor: '#F0E68C'}" icon="font_download"  label="AGENDA" caption="">
+          <q-expansion-item class="agenda" popup :header-style="{ backgroundColor: '#F0E68C'}" icon="font_download"  label="AGENDA" caption="">
             <q-separator />
             <q-card>
               <q-card-section>
-                Lorem ipsum dolor sit amet,
+                item
+                item
               </q-card-section>
             </q-card>
           </q-expansion-item>
@@ -44,6 +54,16 @@
                   <router-link to="/Register">Cadastre-se</router-link>
                   <q-btn outlined class="btn-logar" @click="opemPerfil=true, opemLogin=false" color="white" text-color="black" label="Logar" style="width: 70%; margin-top: 10px; "/>
                   <!--<q-btn outlined class="btn-cadastro" color="white" text-color="black" label="Cadastre-se" style="margin-left: 10px;"/>-->
+                </div>
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+          <q-expansion-item class="perfil" popup :header-style="{ backgroundColor: 'white'}" :duration="400" icon="perm_identity" label="PERFIL" caption="">
+            <q-separator />
+            <q-card>
+              <q-card-section>
+                <div class="btn-field column" style="width: 90%; align-content: center;">
+                  <q-btn outlined class="btn-perfil" to="/Profile" color="black" text-color="white" label="VER PERFIL" style="width: 70%; margin-top: 10px; "/>
                 </div>
               </q-card-section>
             </q-card>
