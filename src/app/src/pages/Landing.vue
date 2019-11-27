@@ -8,15 +8,20 @@
       </div>
       <div class="nav-container">
         <q-list>
-          <q-expansion-item class="sobre" popup default-opened :header-style="{ backgroundColor: '#7FFFD4' }" icon="notes" label="SOBRE" caption="">
+          <q-expansion-item class="menu" popup default-opened :header-style="{ backgroundColor: '#7FFFD4'}" style="width: 250px;">
+            <template v-slot:header>
+              <q-item-section>
+                <span class="title-menu">SOBRE</span>
+              </q-item-section>
+            </template>
             <q-separator />
             <q-card>
               <q-card-section>
                 <div class="column">
-                  <router-link to="/About">Plataforma De Cultura</router-link>
-                  <a href="">Fórum </a>
-                  <router-link to="/Terms" style="">Termos</router-link>
-                  <router-link to="/Faq">FAQ</router-link>
+                  <router-link class="link" to="/About">A PLATAFORMA</router-link>
+                  <a class="link" href=""> O FÓRUM </a>
+                  <router-link class="link" to="/Terms" style="">NOSSOS TERMOS</router-link>
+                  <router-link class="link" to="/Faq">FAQ</router-link>
                   <div class="row" >
                     <q-icon  color="white" name="img:assets/acebook_rounded.png" style="font-size: 4em"/>
                     <q-icon color="white" name="img:~/assets/images/instagram_rounded.png" style="font-size: 4em"/>
@@ -25,16 +30,32 @@
               </q-card-section>
             </q-card>
           </q-expansion-item>
-          <q-expansion-item class="agenda" popup :header-style="{ backgroundColor: '#F0E68C'}" icon="font_download"  label="AGENDA" caption="">
+          <q-expansion-item class="menu" popup :header-style="{ backgroundColor: '#F0E68C'}" style="width: 220px;">
+            <template v-slot:header>
+              <q-item-section>
+                <span class="title-menu">AGENDA</span>
+              </q-item-section>
+            </template>
             <q-separator />
             <q-card>
               <q-card-section>
-                item
-                item
+                <ul style="list-style: none;">
+                  <li>
+                    evento x
+                  </li>
+                  <li>
+                    evento y
+                  </li>
+                </ul>
               </q-card-section>
             </q-card>
           </q-expansion-item>
-          <q-expansion-item class="login-box" popup :header-style="{ backgroundColor: '#FFA07A'}" :duration="400" icon="account_circle" label="LOGIN" caption="">
+          <q-expansion-item class="menu" popup :header-style="{ backgroundColor: '#FFA07A'}" style="width: 270px;">
+            <template v-slot:header>
+              <q-item-section>
+                <span class="title-menu">LOGIN</span>
+              </q-item-section>
+            </template>
             <q-separator />
             <q-card>
               <q-card-section>
@@ -50,15 +71,20 @@
                   </template>
                 </q-input>
                 <div class="btn-field column" style="width: 90%; align-content: center;">
-                  <router-link to="/Recover">Esqueceu sua conta?</router-link>
-                  <router-link to="/Register">Cadastre-se</router-link>
+                  <router-link class="link" to="/Recover">Esqueceu sua conta?</router-link>
+                  <router-link class="link" to="/Register">Cadastre-se</router-link>
                   <q-btn outlined class="btn-logar" @click="opemPerfil=true, opemLogin=false" color="white" text-color="black" label="Logar" style="width: 70%; margin-top: 10px; "/>
                   <!--<q-btn outlined class="btn-cadastro" color="white" text-color="black" label="Cadastre-se" style="margin-left: 10px;"/>-->
                 </div>
               </q-card-section>
             </q-card>
           </q-expansion-item>
-          <q-expansion-item class="perfil" popup :header-style="{ backgroundColor: 'white'}" :duration="400" icon="perm_identity" label="PERFIL" caption="">
+          <q-expansion-item class="menu" popup :header-style="{ backgroundColor: 'white'}" style="width: 200px;">
+            <template v-slot:header>
+              <q-item-section>
+                <span class="title-menu">PERFIL</span>
+              </q-item-section>
+            </template>
             <q-separator />
             <q-card>
               <q-card-section>
@@ -71,14 +97,19 @@
         </q-list>
       </div>
       <div class="filter-container">
-        <q-expansion-item popup :header-style="{ backgroundColor: '#98FB98'}" icon="bubble_chart" label="FILTRO" caption="">
-            <q-separator />
-            <q-card>
-              <q-card-section>
-                Lorem ipsum dolor sit amet,
-              </q-card-section>
-            </q-card>
-          </q-expansion-item>
+        <q-expansion-item class ="menu" popup :header-style="{ backgroundColor: '#98FB98'}" style="width: 220px">
+          <template v-slot:header>
+              <q-item-section>
+                <span class="title-menu">FILTRO</span>
+              </q-item-section>
+            </template>
+          <q-separator />
+          <q-card>
+            <q-card-section>
+              Lorem ipsum dolor sit amet,
+            </q-card-section>
+          </q-card>
+        </q-expansion-item>
       </div>
     </div>
   </q-page>
@@ -92,6 +123,21 @@ export default {
 
 
 <style lang="sass" scoped>
+.menu
+  font-family: 'Fredoka One';
+  font-weight: normal;
+  min-width: 200px;
+
+.link
+  text-decoration: none;
+  font-family: 'arial';
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
+
+.link:hover
+  color: orange;
+
 .map
   z-index: 0;
   height: 550px;
@@ -123,23 +169,6 @@ export default {
   top: 60vh;
   right: 0;
   background-color: none;
-
-.l-menu
-  font-size: 40px;
-  text-decoration: none;
-  background: none;
-  color: black;
-  letter-spacing: 0px;
-
-.r-menu
-  font-size: 40px;
-  display: block;
-  text-decoration: none;
-  background: none;
-  color: black;
-  letter-spacing: 0px;
-  float: right;
-  top: 50%;
 
 .column
   display: flex;

@@ -10,6 +10,9 @@ export default {
 };
 </script>
 <style lang="sass" scoped>
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+
 .column
   display: flex
   flex-direction: column
