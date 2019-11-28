@@ -1,14 +1,14 @@
 
 <template>
-  <q-page style="background-color: white; width: 100%;">
+  <q-page style="background-color: white; width: 100%; min-height: 700px">
     <div class="body">
       <div class="map-container" style="">
         <map-import class="map">
         </map-import>
       </div>
       <div class="nav-container">
-        <q-list>
-          <q-expansion-item class="menu" popup default-opened :header-style="{ backgroundColor: '#7FFFD4'}" style="width: 250px;">
+        <!-- <q-list  class="rounded-borders">
+          <q-expansion-item class="menu" popup :header-style="{ backgroundColor: '#7FFFD4'}" style="width: 250px;">
             <template v-slot:header>
               <q-item-section>
                 <span class="title-menu">SOBRE</span>
@@ -74,7 +74,7 @@
                   <router-link class="link" to="/Recover">Esqueceu sua conta?</router-link>
                   <router-link class="link" to="/Register">Cadastre-se</router-link>
                   <q-btn outlined class="btn-logar" @click="opemPerfil=true, opemLogin=false" color="white" text-color="black" label="Logar" style="width: 70%; margin-top: 10px; "/>
-                  <!--<q-btn outlined class="btn-cadastro" color="white" text-color="black" label="Cadastre-se" style="margin-left: 10px;"/>-->
+                  <q-btn outlined class="btn-cadastro" color="white" text-color="black" label="Cadastre-se" style="margin-left: 10px;"/>
                 </div>
               </q-card-section>
             </q-card>
@@ -94,7 +94,69 @@
               </q-card-section>
             </q-card>
           </q-expansion-item>
-        </q-list>
+        </q-list> -->
+        <q-list class="bg-black rounded-borders" dark padding bordered style="width: 200px">
+          <q-expansion-item
+            switch-toggle-side
+            label="SOBRE"
+            style="width: 250px"
+          >
+            <q-card class="bg-grey-9">
+              <q-card-section>
+                <div class="column">
+                  <router-link class="link" to="/About">A PLATAFORMA</router-link>
+                  <a class="link" href=""> O FÓRUM </a>
+                  <router-link class="link" to="/Terms" style="">NOSSOS TERMOS</router-link>
+                  <router-link class="link" to="/Faq">FAQ</router-link>
+                  <div class="row" >
+                    <q-icon  color="white" name="img:assets/acebook_rounded.png" style="font-size: 4em"/>
+                    <q-icon color="white" name="img:~/assets/images/instagram_rounded.png" style="font-size: 4em"/>
+                  </div>
+                </div>
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+          <q-separator style="height: 8px"/>
+          <q-expansion-item
+            switch-toggle-side
+            label="AGENDA"
+            style="width: 220px"
+          >
+            <q-card class="bg-grey-9">
+              <q-card-section>
+                Lorem ipsum dolor sit amet,
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+
+          <q-expansion-item
+            switch-toggle-side
+            label="LOGIN"
+            style="width: 260px;"
+            header-class="text-white"
+          >
+            <q-card class="bg-grey-9">
+              <q-card-section>
+                <q-input outlined v-model="userLogin" label="login" style="margin: 10px; width: 90%;"/>
+                <q-input outlined v-model="password" label="senha" :type="isPwd ? 'password' : 'text'" hint="" style="margin: 10px; width: 90%; padding-bottom: 0px;">
+                  <template v-slot:append>
+                    <q-icon
+                      :name="isPwd ? 'visibility_off' : 'visibility'"
+                      size="20px"
+                      class="cursor-pointer"
+                      @click="isPwd = !isPwd"
+                    />
+                  </template>
+                </q-input>
+                <div class="btn-field column" style="width: 90%; align-content: center;">
+                  <router-link class="link" to="/Recover">Esqueceu sua conta?</router-link>
+                  <router-link class="link" to="/Register">Cadastre-se</router-link>
+                  <q-btn outlined class="btn-logar" @click="opemPerfil=true, opemLogin=false" color="white" text-color="black" label="Logar" style="width: 70%; margin-top: 10px; "/>
+                </div>
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+          </q-list>
       </div>
       <div class="filter-container">
         <q-expansion-item class ="menu" popup :header-style="{ backgroundColor: '#98FB98'}" style="width: 220px">

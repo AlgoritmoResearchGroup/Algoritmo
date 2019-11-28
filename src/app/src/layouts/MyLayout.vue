@@ -8,7 +8,7 @@
       </div>
       <div class="col-r">
         <span class="title">CARTOGRAFIA DA CULTURA</span>
-        <span class="text">cultura em movimento</span>
+        <span class="text">CULTURA EM MOVIMENTO</span>
       </div>
     </div>
     <q-page-container>
