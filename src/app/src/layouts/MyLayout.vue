@@ -1,6 +1,6 @@
 <template>
   <q-layout>
-    <div class="header-container">
+    <!-- <div class="header-container">
       <div class="col-l">
         <span class="forum-info">Fórum Municipal</span>
         <span class="forum-info">De Cultura</span>
@@ -10,7 +10,7 @@
         <span class="title">CARTOGRAFIA DA CULTURA</span>
         <span class="text">CULTURA EM MOVIMENTO</span>
       </div>
-    </div>
+    </div> -->
     <q-page-container>
       <router-view />
     </q-page-container>

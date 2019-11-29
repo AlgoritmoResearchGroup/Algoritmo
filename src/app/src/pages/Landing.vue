@@ -1,6 +1,22 @@
 
 <template>
-  <q-page style="background-color: white; width: 100%; min-height: 700px">
+  <q-page  class="page">
+    <div class="header-container">
+      <div class="col-l">
+        <!-- <span class="forum-info">FÓRUM</span>
+        <span class="forum-info">MUNICIPAL</span>
+        <span class="separator">DE </span>
+        <span class="forum-info">CULTURA</span>
+        <span class="separator">DE</span>
+        <span class="forum-info">CAMPO</span>
+        <span class="forum-info">GRANDE</span> -->
+        <span class="test">FÓRUM MUNICIPAL DE CULTURA DE CAMPO GRANDE</span>
+      </div>
+      <div class="col-r">
+        <span class="title">CARTOGRAFIA DA CULTURA</span>
+        <span class="text">CULTURA EM MOVIMENTO</span>
+      </div>
+    </div>
     <div class="body">
       <div class="map-container" style="">
         <map-import class="map">
@@ -95,7 +111,7 @@
             </q-card>
           </q-expansion-item>
         </q-list> -->
-        <q-list class="bg-black rounded-borders" dark padding bordered style="width: 200px">
+        <!-- <q-list class="bg-black rounded-borders" dark padding bordered style="width: 200px">
           <q-expansion-item
             switch-toggle-side
             label="SOBRE"
@@ -156,10 +172,10 @@
               </q-card-section>
             </q-card>
           </q-expansion-item>
-          </q-list>
+        </q-list> -->
       </div>
       <div class="filter-container">
-        <q-expansion-item class ="menu" popup :header-style="{ backgroundColor: '#98FB98'}" style="width: 220px">
+        <!-- <q-expansion-item class ="menu" popup :header-style="{ backgroundColor: '#98FB98'}" style="width: 220px">
           <template v-slot:header>
               <q-item-section>
                 <span class="title-menu">FILTRO</span>
@@ -171,7 +187,7 @@
               Lorem ipsum dolor sit amet,
             </q-card-section>
           </q-card>
-        </q-expansion-item>
+        </q-expansion-item> -->
       </div>
     </div>
   </q-page>
@@ -185,6 +201,65 @@ export default {
 
 
 <style lang="sass" scoped>
+.header-container
+  position: absolute;
+  width: 99%;
+  z-index: 1;
+
+.title
+  margin-left: 10%;
+  font-family: 'Monoton', 'Carter One', cursive;
+  font-size: 75px;
+
+.forum-info
+  font-family: 'Bowlby One SC';
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  transform: rotate(-50deg);
+
+.test
+  position: absolute;
+  left: -270px;
+  font-family: 'Yeseva One', 'Bowlby One SC';
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  transform: rotate(-90deg);
+
+.separator
+  font-family: 'Fredoka One';
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+  transform: rotate(-50deg);
+
+.text
+  margin-left: 60%;
+  font-family: 'Bowlby One SC', cursive;
+  font-size: 18px;
+  margin-top: -25px;
+
+.col-l
+  position: absolute;
+  top: 430px;
+  left: 10px;
+  z-index: 1;
+  display: flex;
+  //flex-direction: column;
+  height: 25px;
+  width: 100%;
+  // background-color: #151515;
+  padding-top: 5px;
+
+.col-r
+  position: absolute;
+  top: 30px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
 .menu
   font-family: 'Fredoka One';
   font-weight: normal;
@@ -200,10 +275,8 @@ export default {
 .link:hover
   color: orange;
 
-.map
-  z-index: 0;
-  height: 550px;
-  width: 100%;
+.page
+  background-color: #ffffd6;
 
 .body
   position: relative;
@@ -214,15 +287,17 @@ export default {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 100px;
+  left: 3%;
+  height: 550px;
+  width: 92%;
   z-index: 0;
 
 .nav-container
   background-color: none;
   height: 100%;
   position: absolute;
-  top: 20vh;
+  top: 35vh;
   left: 0;
   z-index: 1;
 
